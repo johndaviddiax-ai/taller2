@@ -1,211 +1,209 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg-color: blue;
+  --text-color: rgb(255, 255, 255);
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(211, 203, 190);
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
 }
-
-/* ==========================
-   CONTENEDORES CENTRADOS
-   ========================== */
-
-.container,
-.grid,
-article,
-.margin,
-.border,
-.padding,
-.content,
-.containers {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==========================
-   GRID PRINCIPAL
-   ========================== */
-
-.grid {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* ==========================
-   GRID ITEMS CENTRADOS
-   ========================== */
-
-.grid-cell,
-.contact-cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 120px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* ==========================
-   ARTICLE CENTRADO
-   ========================== */
-
-article {
+header {
+   background: rgb(0, 0, 0);
+   font-family:blue;
+   color: #ffffff;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(1px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:
+        0 10px 30px var(--shadow),
+        inset 0 0 20px rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    box-shadow: 0 2px 5px rgb(79, 73, 255);
+}
+.nav ul {
+  list-style-type: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  width: 73%;
+  margin: auto;
+  box-shadow: 0 2px 5px #524cfb;
+}
+.nav ul li { margin: 0 15px; }
+.nav ul li a { color: white; text-decoration: none; padding: 10px 20px; display: block; }
+.nav ul li a:hover { background-color: #000000; }
+main { padding: 30px; }
+article {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(59, 42, 255);
   text-align: center;
 }
+.margin  { background-color: #6f009f; padding: 30px; width: 800px; margin: auto; }
+.border  { background-color: #cdb900; padding: 30px; width: 700px; margin: auto; }
+.padding { background-color: #0401d0; padding: 30px; width: 500px; margin: auto; }
+.content { background-color: #22e7ee; width: 300px; height: 150px; margin: auto; text-align: center; font-weight: bold; line-height: 150px; }
+.containers { display: grid; grid-template-columns: auto auto auto; padding: 10px; }
+.containers div { background-color: #f1f1f1; border: 1px solid black; padding: 10px; font-size: 30px; text-align: center; }
+.grid { margin-top: var; display: grid; grid-template-columns: 200px 1fr 1fr; grid-template-rows: auto 1fr auto auto; gap: 10px; }
+.grid-cell { background-color:red; color: var(--secondary-color); padding: 10px; border-radius: 10px; text-align: center; font-weight: bold; display: flex; justify-content: center; align-items: center; }
+.header-cell  { background-color:#0933ee; min-height: 0px; grid-column: 1 / -1; color: #ffffff; }
+.aside-cell   { background-color:#b803ea; min-height: 0px; grid-row: 2 / 4; grid-column: 1 / 2; color: #ffffff; }
+.main-cell    { background-color:#044e7c; min-height: 0px; grid-column: 2 / 4; color: #ffffff; }
+.section-cell { background-color:#0b7a3a; min-height: 0px; color: #ffffff; }
+.section1     { grid-column: 2 / 3; grid-row: 3; color: #ffffff; }
+.section2     { grid-column: 3 / 4; grid-row: 3; color: #ffffff; }
+.footer-cell  { background-color:#6a13b1; min-height: 0px; grid-column: 1 / -1; color: #ffffff; }
+footer { background-color: #000000; color: white; text-align: center; padding: 10px 0; }
+.contact-cell { background-color: red; color: var(--secondary-color); padding: 10px; border-radius: 10px; text-align: center; font-weight: bold; display: flex; justify-content: center; align-items: center; }
+.contact-header   { background-color: #384fb3; min-height: 0px; grid-column: 1 / -1; color: #ffffff; border-radius: 10px; }
+.contact-aside    { background-color: #5f43ed; min-height: 0px; grid-row: 2 / 4; grid-column: 1 / 2; color: #ffffff; border-radius: 10px; }
+.contact-main     { background-color: #404ea9; min-height: 0px; grid-column: 2 / 4; color: #ffffff; border-radius: 10px; text-align: justify; padding-top: 10px; }
+.contact-section-cell { background-color: #37147f; min-height: 99px; color: #ffffff; border-radius: 10px; }
+.contact-section1 { background-color: #37147f; grid-column: 2 / 3; grid-row: 3; color: #ffffff; border-radius: 10px; }
+.contact-section2 { background: #000000; grid-column: 3 / 4; grid-row: 3; color: #ffffff; border-radius: 10px; }
+.contact-footer   { background-color: #000000; min-height: 0px; grid-column: 1 / -1; color: #ffffff; border-radius: 10px; }
+.imagen { max-width: 100%; height: auto; }
+.boton { background-color: #111; color: #fff; border: none; padding: 2px 24px; font-size: 16px; font-weight: 600; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(19,19,19,0.3); }
 
-/* ==========================
-   MODELO DE CAJA RESPONSIVO
-   ========================== */
-
-.margin {
-  width: min(700px, 100%);
+/* CSS CV */
+:root {
+  --background-color: #edf7fd;
+  --surface-color: #ffffff;
+  --surface-strong: #f3f8ff;
+  --border-color: #dce6f2;
+  --text-color: #000000;
+  --muted-color: #000000;
+  --accent-color: #000000;
+  --accent-soft: #bed8ff;
 }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--background-color); padding: 24px; }
+.container-cv { max-width: 1080px; margin: 0 auto; background: var(--surface-color); box-shadow: 0 18px 50px rgba(11,44,97,0.12); border-radius: 24px; overflow: hidden; }
+.cv-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; padding: 36px 24px; background: linear-gradient(135deg, #71e7f7 0%, #244c92 100%); color: rgb(0,0,0); }
+.profile-photo { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid rgb(0,0,0); background: white; }
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+.header-text h1 { font-size: 4.0rem; margin-bottom: 8px; }
+.subtitle { color: rgba(255,238,238,0.8); font-size: 1rem; margin-bottom: 18px; }
+.contact-list { display: grid; gap: 8px; }
+.contact-list a { color: rgba(0,0,0,0.95); text-decoration: none; }
+.section { padding: 0 24px 30px; }
+.section:last-of-type { border-bottom: none; }
+.section-heading { margin-bottom: 0px; }
+.section-heading h2 { font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-color); }
+.section p, .job-card p, .info-card p, .cert-card p { color: var(--muted-color); }
+.job-card { background: var(--surface-strong); border: 1px solid var(--border-color); border-radius: 18px; padding: 22px; }
+.job-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.job-meta { margin-bottom: 14px; color: var(--muted-color); font-size: 0.95rem; }
+.job-card ul { list-style: disc inside; color: var(--text-color); }
+.two-column { display: grid; gap: 24px; }
+.info-block { background: var(--surface-strong); border: 1px solid var(--border-color); border-radius: 18px; padding: 20px; }
+.info-card, .cert-card { background: white; border: 1px solid var(--border-color); border-radius: 14px; padding: 18px; margin-top: 12px; }
+.info-card h3, .cert-card h3 { font-size: 1rem; margin-bottom: 6px; }
+.cert-grid { display: grid; gap: 12px; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.skill-list span { background: var(--accent-soft); color: var(--accent-color); border-radius: 999px; padding: 10px 16px; font-size: 0.95rem; }
 
-.border {
-  width: min(600px, 100%);
-}
 
-.padding {
-  width: min(400px, 100%);
-}
+/* ════════════════════════════════════════════
+   RESPONSIVE MÓVIL — añadido al final
+   ════════════════════════════════════════════ */
 
-.content {
-  width: min(300px, 100%);
-}
+/* Tablet y móvil grande (≤ 768px) */
+@media (max-width: 768px) {
 
-/* ==========================
-   IMÁGENES RESPONSIVAS
-   ========================== */
+  body { padding: 12px; }
 
-.imagen {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
+  /* Header */
+  header { padding: 24px 16px; border-radius: 12px; }
 
-/* ==========================
-   BOTÓN CENTRADO
-   ========================== */
-
-.boton {
-  display: inline-block;
-  margin: 15px auto;
-}
-
-/* ==========================
-   CORRECCIÓN CONTACTO
-   ========================== */
-
-.contact-section2 {
-  background-color: #0b7a3a;
-}
-
-/* ==========================
-   TABLET
-   ========================== */
-
-@media (max-width: 900px) {
-
-  .containers {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .aside-cell,
-  .contact-aside {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
-
-  .main-cell,
-  .contact-main {
-    grid-column: 1 / -1;
-  }
-
-  .section1,
-  .section2,
-  .contact-section1,
-  .contact-section2 {
-    grid-column: auto;
-    grid-row: auto;
-  }
-}
-
-/* ==========================
-   MÓVIL / iPHONE
-   ========================== */
-
-@media (max-width: 600px) {
-
-  .container {
-    padding: 10px;
-  }
-
-  main {
-    padding: 15px;
-  }
-
+  /* Nav: apila los ítems verticalmente */
   .nav ul {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
   }
-
   .nav ul li {
+    margin: 0;
     width: 100%;
     text-align: center;
-    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
+  .nav ul li:last-child { border-bottom: none; }
 
-  .margin,
-  .border,
-  .padding,
-  .content {
-    width: 100%;
-  }
+  /* Main */
+  main { padding: 16px; }
 
-  .containers {
-    grid-template-columns: 1fr;
-  }
+  /* Anchos fijos → 100% para que no desborden */
+  .margin, .border, .padding, .content { width: 100%; }
+  .content { height: auto; line-height: normal; padding: 20px 0; }
 
+  /* Grid demo: 3 col → 1 col */
+  .containers { grid-template-columns: 1fr; }
+
+  /* Grid layout → columna única, todo en flujo normal */
   .grid {
     grid-template-columns: 1fr;
-    width: 100%;
-    padding: 10px;
+    grid-template-rows: auto;
   }
+  .aside-cell   { grid-row: auto; grid-column: 1 / -1; }
+  .main-cell    { grid-column: 1 / -1; }
+  .section1     { grid-column: 1 / -1; grid-row: auto; }
+  .section2     { grid-column: 1 / -1; grid-row: auto; }
 
-  .grid-cell,
-  .contact-cell {
-    min-height: 80px;
-    font-size: 16px;
-  }
+  /* Contact grid → columna única */
+  .contact-aside    { grid-row: auto; grid-column: 1 / -1; }
+  .contact-main     { grid-column: 1 / -1; }
+  .contact-section1 { grid-column: 1 / -1; grid-row: auto; }
+  .contact-section2 { grid-column: 1 / -1; grid-row: auto; }
 
-  .header-cell,
-  .aside-cell,
-  .main-cell,
-  .section-cell,
-  .section1,
-  .section2,
-  .footer-cell,
-  .contact-header,
-  .contact-aside,
-  .contact-main,
-  .contact-section-cell,
-  .contact-section1,
-  .contact-section2,
-  .contact-footer {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
+  /* CV */
+  .container-cv { border-radius: 16px; }
+  .cv-header    { padding: 28px 16px; gap: 16px; }
+  .header-text h1 { font-size: 2.2rem; }
+  .profile-photo  { width: 110px; height: 110px; }
+  .section        { padding: 0 16px 24px; }
+  .two-column     { grid-template-columns: 1fr; }
+  .skill-list span { font-size: 0.85rem; padding: 8px 12px; }
+  .job-card { padding: 16px; }
+}
+
+/* Móvil pequeño (≤ 480px) */
+@media (max-width: 480px) {
+
+  body { padding: 8px; }
+
+  header { padding: 18px 12px; border-radius: 10px; }
+
+  .nav ul li a { padding: 12px 16px; font-size: 0.95rem; }
+
+  .containers div { font-size: 20px; padding: 8px; }
+
+  .boton { width: 100%; padding: 10px 16px; font-size: 15px; }
+
+  /* CV */
+  .header-text h1 { font-size: 1.75rem; }
+  .profile-photo  { width: 88px; height: 88px; }
+  .section-heading h2 { font-size: 1rem; }
+  .job-card   { border-radius: 12px; padding: 14px; }
+  .info-card, .cert-card { padding: 14px; border-radius: 10px; }
+  .container-cv { border-radius: 12px; }
+  .cert-grid  { grid-template-columns: 1fr; }
 }
